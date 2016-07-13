@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B42038681D230959002A13F6"
-               BuildableName = "SearchStore.app"
+               BuildableName = "SeachStore.app"
                BlueprintName = "SearchStore"
                ReferencedContainer = "container:SearchStore.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B42038681D230959002A13F6"
-            BuildableName = "SearchStore.app"
+            BuildableName = "SeachStore.app"
             BlueprintName = "SearchStore"
             ReferencedContainer = "container:SearchStore.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B42038681D230959002A13F6"
-            BuildableName = "SearchStore.app"
+            BuildableName = "SeachStore.app"
             BlueprintName = "SearchStore"
             ReferencedContainer = "container:SearchStore.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B42038681D230959002A13F6"
-            BuildableName = "SearchStore.app"
+            BuildableName = "SeachStore.app"
             BlueprintName = "SearchStore"
             ReferencedContainer = "container:SearchStore.xcodeproj">
          </BuildableReference>

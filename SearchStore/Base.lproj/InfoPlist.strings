@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  iTuneSearch
+
+  Created by Shuyan Guo on 6/9/16.
+  Copyright © 2016 GG. All rights reserved.
+*/
+CFBundleDisplayName = "SearchStore";

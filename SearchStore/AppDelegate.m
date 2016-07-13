@@ -1,12 +1,15 @@
 //
 //  AppDelegate.m
-//  SearchStore
+// StoreSearch
 //
-//  Created by Shuyan Guo on 6/28/16.
+//  Created by Shuyan Guo on 6/2/16.
 //  Copyright © 2016 GG. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "SearchViewController.h"
+#import "DetailViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -14,15 +17,52 @@
 
 @implementation AppDelegate
 
+-(void)customizeAppearance {
+    UIColor *barTintColor = [UIColor colorWithRed:20/255.0f green:160/255.0f blue:160/255.0f alpha:1.0f];
+    [[UISearchBar appearance] setBarTintColor:barTintColor];
+   
+    self.window.tintColor = [UIColor colorWithRed:10/255.0f green:80/255.0f blue:80/255.0f alpha:1.0f];
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc] initWithFrame:
+                   [[UIScreen mainScreen] bounds]];
+    
+    [self customizeAppearance];
+    self.searchViewController = [[SearchViewController alloc]
+                                 initWithNibName:@"SearchViewController" bundle:nil];
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        _splitViewController = [[UISplitViewController alloc] init];
+        DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+        
+        UINavigationController *detailNavigationController = [[UINavigationController alloc]initWithRootViewController:detailViewController];
+        
+        _splitViewController.delegate = detailViewController;
+        _splitViewController.viewControllers = @[_searchViewController,detailNavigationController];
+        self.window.rootViewController = _splitViewController;
+        
+        if(self.window.bounds.size.height > self.window.bounds.size.width){
+            UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithTitle:@"❮ Search" style:UIBarButtonItemStylePlain target:_splitViewController.displayModeButtonItem.target action:_splitViewController.displayModeButtonItem.action];
+            [detailViewController.navigationItem setLeftBarButtonItem:button];
+
+        }
+        _searchViewController.detailVC = detailViewController;
+        
+        
+    } else {
+        self.window.rootViewController = self.searchViewController;
+    }
+    
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {

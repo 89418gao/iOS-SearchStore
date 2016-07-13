@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Type:"; ObjectID = "10F-2f-ZIq"; */
+"10F-2f-ZIq.text" = "商品:";
+
+/* Class = "UILabel"; text = "Gerne:"; ObjectID = "7VJ-CO-6IT"; */
+"7VJ-CO-6IT.text" = "类别:";
+
+/* Class = "UIButton"; normalTitle = "$9.99"; ObjectID = "GqR-ib-5OJ"; */
+"GqR-ib-5OJ.normalTitle" = "$9.99";
+
+/* Class = "UILabel"; text = "Artist Name"; ObjectID = "OV2-VC-f3X"; */
+"OV2-VC-f3X.text" = "艺术家";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "afG-Hw-ZQ4"; */
+"afG-Hw-ZQ4.text" = "名称";
+
+/* Class = "UILabel"; text = "genre value"; ObjectID = "hYY-5V-9JM"; */
+"hYY-5V-9JM.text" = "";
+
+/* Class = "UILabel"; text = "type value"; ObjectID = "s4Z-eq-yA2"; */
+"s4Z-eq-yA2.text" = "";
